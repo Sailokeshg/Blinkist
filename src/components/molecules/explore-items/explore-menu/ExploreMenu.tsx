@@ -20,7 +20,7 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import Grid from "@material-ui/core/Grid";
-import useStyle from "../../../../themes/Theme";
+import { makeStyles } from "@mui/styles";
 import ExploreMenuHead from "../explore-header/ExploreMenuHead";
 import { Divider } from "@mui/material";
 
@@ -48,6 +48,32 @@ const exploreMenuList = [
 interface Handler {
   handleChange: () => void;
 }
+
+const useStyle = makeStyles({
+  exploreBox: {
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+  },
+  exploreBoxOne: {
+    paddingLeft: "285px",
+    backgroundColor: "#F1F6F4",
+    paddingBottom: "15px",
+  },
+  exploreBoxTwo: {
+    backgroundColor: "#111",
+    height: "100%",
+    width: "100%",
+    opacity: "0.4",
+  },
+  exploreDivider: {
+    marginRight: "170px",
+  },
+  exploreGrid: {
+    paddingTop: "10px",
+  },
+ 
+});
 const ExploreMenu = (props: Handler) => {
   let count = 1;
   const classes = useStyle();
@@ -62,6 +88,7 @@ const ExploreMenu = (props: Handler) => {
     ),
   }));
   return (
+    <>
     <Box className={classes.exploreBox}>
       <Box className={classes.exploreBoxOne}>
         <Box>
@@ -82,6 +109,7 @@ const ExploreMenu = (props: Handler) => {
       <Box className={classes.exploreBoxTwo}>
           </Box>
     </Box>
+    </>
   );
 };
 

@@ -1,13 +1,24 @@
 import React from "react";
 import { Button } from "@material-ui/core";
-import useStyle from "../../../themes/Theme";
+import {makeStyles} from "@material-ui/core/styles";
 
 interface ButtonTypes {
   itemicon: React.ReactElement;
   itemname: string;
   handleChange: () => void;
 }
-
+const useStyle = makeStyles({
+  buttons: {
+    textTransform: "none",
+    color: "#6D787E",
+    fontWeight: 400,
+    fontStyle: "Normal",
+    fontSize: "16px",
+    "&:hover": {
+      color: "#0365F2",
+    },
+  },
+});
 const Buttons = (props: ButtonTypes) => {
   const classes = useStyle();
   return (

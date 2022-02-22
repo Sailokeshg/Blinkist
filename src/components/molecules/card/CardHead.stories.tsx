@@ -1,5 +1,4 @@
 import CardHead from "./CardHead";
-import book1 from "../../../assets/book1.jpg";
 import {ComponentMeta, ComponentStory} from "@storybook/react";
 
 export default {

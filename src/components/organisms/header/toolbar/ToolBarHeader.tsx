@@ -3,7 +3,7 @@ import React from "react";
 import AvatarDropDown from "../../../molecules/avatar/AvatarDropDown";
 import HeaderLeft from "../header-left/HeaderLeft";
 import { ThemeProvider } from '@material-ui/core';
-import theme from '../../../../themes/Theme';
+import {theme} from '../../../../themes/Theme';
 
 interface Props {
   icon: boolean;

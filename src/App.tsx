@@ -15,6 +15,8 @@ import book9 from "../src/components/atoms/assets/book9.png";
 import bookimage from "../src/components/atoms/assets/bookimage.png";
 import ToolBarHeader from './components/organisms/header/toolbar/ToolBarHeader';
 import { useState } from 'react';
+import { ThemeProvider } from '@material-ui/core';
+import {theme} from './themes/Theme';
 import MyLibraryHeading from './components/atoms/mylibrary/mylibrary-heading/MyLibraryHeading';
 
 
@@ -104,9 +106,11 @@ function App() {
     seticon(!icon);
   }
   return (
+    
     <div className="App">
      <ToolBarHeader icon={icon} handleChange={handleChange}/>
     </div>
+    
   );
 }
 

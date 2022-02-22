@@ -1,10 +1,20 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import useStyles  from "../../../themes/Theme";
+import {makeStyles} from "@mui/styles";
 
 interface BookDetailsProps {
     bookName: string;
 }
+
+const useStyles = makeStyles({
+  bookTitleOne: {
+    fontStyle: "normal",
+    fontSize: "18px",
+    fontWeight: 700,
+    marginLeft: "16px",
+    marginTop: "23px",
+  },
+});
 const CardHead = (props:BookDetailsProps) => {
    const classes = useStyles();
     return (
