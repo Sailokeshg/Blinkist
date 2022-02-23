@@ -19,7 +19,7 @@ import CommentOutlinedIcon from "@mui/icons-material/CommentOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
-import Grid from "@material-ui/core/Grid";
+import {Grid} from "@mui/material"
 import { makeStyles } from "@mui/styles";
 import ExploreMenuHead from "../explore-header/ExploreMenuHead";
 import { Divider } from "@mui/material";
@@ -54,6 +54,7 @@ const useStyle = makeStyles({
     position: "absolute",
     width: "100%",
     height: "100%",
+    paddingTop: "20px",
   },
   exploreBoxOne: {
     paddingLeft: "285px",
@@ -72,7 +73,6 @@ const useStyle = makeStyles({
   exploreGrid: {
     paddingTop: "10px",
   },
- 
 });
 const ExploreMenu = (props: Handler) => {
   let count = 1;
@@ -89,26 +89,25 @@ const ExploreMenu = (props: Handler) => {
   }));
   return (
     <>
-    <Box className={classes.exploreBox}>
-      <Box className={classes.exploreBoxOne}>
-        <Box>
-          <ExploreMenuHead />
-          <Divider
-            className={classes.exploreDivider}
-            style={{ border: "1psx solid #042330" }}
-          />
-          <Grid container spacing={1} className={classes.exploreGrid}>
-            {components.map((e) => (
-              <Grid item  xs={4} key={e.id}>
-                {e.comp}
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-      </Box>
-      <Box className={classes.exploreBoxTwo}>
+      <Box zIndex="1" className={classes.exploreBox}>
+        <Box className={classes.exploreBoxOne}>
+          <Box width="1100px">
+            <ExploreMenuHead />
+            <Divider
+              className={classes.exploreDivider}
+              style={{ border: "1psx solid #042330" }}
+            />
+            <Grid container rowSpacing="18px" className={classes.exploreGrid}>
+              {components.map((e) => (
+                <Grid item xs={4} key={e.id}>
+                  {e.comp}
+                </Grid>
+              ))}
+            </Grid>
           </Box>
-    </Box>
+        </Box>
+        <Box className={classes.exploreBoxTwo}></Box>
+      </Box>
     </>
   );
 };

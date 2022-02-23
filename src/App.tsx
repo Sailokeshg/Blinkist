@@ -18,7 +18,23 @@ import { useState } from 'react';
 import { ThemeProvider } from '@material-ui/core';
 import {theme} from './themes/Theme';
 import MyLibraryHeading from './components/atoms/mylibrary/mylibrary-heading/MyLibraryHeading';
+import FooterMain from './components/molecules/footer/mainfooter/FooterMain';
+import MainSearch from './components/organisms/search/MainSearch';
+import ReadingTabs from './components/organisms/tabs/ReadingTabs';
+import ExploreMenu from './components/molecules/explore-items/explore-menu/ExploreMenu';
 
+const books = [
+  "Beyond Entrepreneurship 2.0",
+  "Bring Your Human to Work",
+  "Employee to Entrepreneur",
+  "Doesn't Hurt to Ask",
+  "The Fate of Food",
+  "Lives of the Stoics",
+  "Loving Your Business",
+  "The Lonely Century",
+  "Eat Better, Feel Better",
+  "Dropshipping",
+];
 
 let readingBooks = [
   {
@@ -97,6 +113,7 @@ let finishedBooks = [
   },
 ];
 
+
 function App() {
 
   const [visible,setvisible] =useState(false);
@@ -105,10 +122,48 @@ function App() {
     setvisible(!visible);
     seticon(!icon);
   }
+
+  const [button,setButton] =useState(false);
+  const handleReadAgain = (item: string) => {
+    if(books.includes(item)){
+      let temp = finishedBooks.find(x => x.name === item);
+      if(temp === undefined){
+        temp = {image:"" , name: "" ,author: "", time: "", finished: false};
+      }
+      temp.finished = false;
+      const a = finishedBooks.filter(x => x.name !== item);
+      finishedBooks =a;
+      readingBooks.push(temp);
+      setButton(!button);
+    }
+  }
+
+  const handleFinish = (item: string) => {
+    if(books.includes(item)){
+      let temp = readingBooks.find(x => x.name === item);
+      if(temp === undefined){
+        temp = {image:"" , name: "" ,author: "", time: "", finished: false};
+      }
+      temp.finished = true;
+      const a = readingBooks.filter(x => x.name !== item);
+      readingBooks =a;
+      finishedBooks.push(temp);
+      setButton(!button);
+    }
+  }
+
   return (
     
     <div className="App">
      <ToolBarHeader icon={icon} handleChange={handleChange}/>
+     {visible ? <ExploreMenu  handleChange={handleChange}/>:undefined}
+     <MyLibraryHeading/>
+     <ReadingTabs
+     currentReading={readingBooks}
+     finishedReading={finishedBooks}
+     handleReadAgain={handleReadAgain}
+     handleFinish={handleFinish}/>
+     <FooterMain/>
     </div>
     
   );

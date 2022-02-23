@@ -1,8 +1,8 @@
 import React from "react";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import NavUp from "../nav/nav-up/NavUp";
 import NavDown from "../nav/nav-down/NavDown";
-import {makeStyles} from "@mui/styles";
+import { makeStyles } from "@mui/styles";
 
 interface HeaderProps {
   icon: boolean;
@@ -22,13 +22,18 @@ const useStyle = makeStyles({
       borderRadius: "0px",
       background: "none",
     },
-  },});
+  },
+});
 const Explore = (props: HeaderProps) => {
   const classes = useStyle();
   return (
-    <Button endIcon={props.icon ? <NavUp /> : <NavDown />}
-    className ={classes.exploreButton}
-    >Explore</Button>
+    <Button
+      endIcon={props.icon ? <NavUp /> : <NavDown />}
+      className={classes.exploreButton}
+    ><Typography variant="body1"> 
+      Explore
+      </Typography>
+    </Button>
   );
 };
 

@@ -14,7 +14,7 @@ interface CardHeadProps {
 }
 const useStyle = makeStyles({
   cardGridOne: {
-    margin: " 16px 0px 0px 16px",
+    margin: " 16px 4px 0px 16px",
   },
   cardGridTwo: {
     marginLeft: "17.67px",

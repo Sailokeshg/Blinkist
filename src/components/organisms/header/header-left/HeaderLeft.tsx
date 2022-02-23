@@ -16,10 +16,15 @@ const useStyle = makeStyles({
     columnGap: "42px",
     marginTop: "30px",
     marginBottom: "30px",
+    justifyContent: "center",
   },
   headerLeftGrid: {
     marginTop: "6px",
+    justifyContent: "center",
   },
+  headerLeftGridLibrary: {
+    marginTop: "4px",
+  }
 });
 const HeaderLeft = (props: HeaderLeftProps) => {
   const classes = useStyle();
@@ -34,7 +39,7 @@ const HeaderLeft = (props: HeaderLeftProps) => {
       <Grid item className={classes.headerLeftGrid}>
         <Explore icon={props.icon} handleChange={props.handleChange} />
       </Grid>
-      <Grid item className={classes.headerLeftGrid}>
+      <Grid item className={classes.headerLeftGridLibrary}>
             <MyLibrary/>
           </Grid>
     </Grid>
