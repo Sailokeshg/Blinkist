@@ -19,7 +19,7 @@ declare module "@mui/material/styles" {
 
 declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
-    heading: true;
+    h1: true;
     subtitle3: true;
     caption1: true;
     caption2: true;
@@ -63,6 +63,11 @@ export const theme = createTheme({
       lineHeight: "45px",
       fontWeight: "bold",
     },
+    h2:{
+        fontSize: "18px",
+        lineHeight: "22.63px",
+        fontWeight: 700,
+    },
     subtitle1: {
       fontSize: "24px",
       lineHeight: "32px",
@@ -102,9 +107,9 @@ export const theme = createTheme({
     },
     caption3: {
       fontStyle: "normal",
-      fontWeight: "normal",
+      fontWeight: 400,
       fontSize: "14px",
-      lineHeight: "18px",
+      lineHeight: "17.6px",
     },
   },
 });

@@ -9,9 +9,8 @@ interface AuthorDetails {
 const useStyle = makeStyles({
   authorNameTypography: {
     fontStyle: "normal",
-    fontSize: "16px",
-    fontWeight: 500,
     color: "#6D787E",
+    textAlign: "left",
   },
   
 });

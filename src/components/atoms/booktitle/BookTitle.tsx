@@ -11,17 +11,16 @@ interface BookDetailsProps {
 const useStyles = makeStyles({
   bookTitleOne: {
     fontStyle: "normal",
-    fontSize: "18px",
-    fontWeight: 700,
     marginLeft: "16px",
     marginTop: "23px",
+    textAlign: "left",
   },
 });
 const CardHead = (props:BookDetailsProps) => {
    const classes = useStyles();
     return (
       <ThemeProvider theme={theme}>
-      <Typography variant="subtitle1" className={classes.bookTitleOne}>
+      <Typography variant="h2" className={classes.bookTitleOne}>
         {props.bookName}
       </Typography>
       </ThemeProvider>

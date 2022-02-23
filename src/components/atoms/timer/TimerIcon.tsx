@@ -3,7 +3,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 const TimerIcon =() => {
   return (
-    <AccessTimeIcon></AccessTimeIcon>
+    <AccessTimeIcon fontSize='small'></AccessTimeIcon>
   )
 };
 

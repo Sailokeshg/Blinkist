@@ -10,9 +10,6 @@ interface TimeRead{
 const useStyle = makeStyles({
   readTimeGrid: {
     allignItems: "center",
-    fontSize: "normal",
-    fontWeight: 400,
-    fontStyle: "normal",
     color: "#6D787E",
   },
 });
@@ -23,7 +20,7 @@ const ReadTime = (props:TimeRead) => {
     <Grid container className={classes.readTimeGrid}>
       <Grid item><TimerIcon/></Grid>
       <Grid item>
-          <Typography variant="subtitle1">
+          <Typography variant="caption3">
               {props.time}
           </Typography>
       </Grid>

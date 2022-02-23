@@ -1,6 +1,8 @@
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import React from "react";
 import { makeStyles } from "@mui/styles";
+import {ThemeProvider} from "@mui/styles";
+import {theme} from "../../../themes/Theme";
 
 interface FinishedButtonProp {
   handleFinish: (item: string) => void;
@@ -20,6 +22,7 @@ const useStyle = makeStyles({
 const FinishedButton = (props: FinishedButtonProp) => {
   const classes = useStyle();
   return (
+    <ThemeProvider theme={theme}>
     <Button
       variant="text"
       className={classes.finishReading}
@@ -28,8 +31,11 @@ const FinishedButton = (props: FinishedButtonProp) => {
       }}
       component="button"
     >
+      <Typography variant="body1">
       Finished
+      </Typography>
     </Button>
+    </ThemeProvider>
   );
 };
 
