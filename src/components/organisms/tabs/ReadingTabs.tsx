@@ -13,6 +13,7 @@ interface Books {
     name: string;
     author: string;
     time: string;
+    readcount: string;
     finished: boolean;
   }[];
   finishedReading: {
@@ -20,6 +21,7 @@ interface Books {
     name: string;
     author: string;
     time: string;
+    readcount: string;
     finished: boolean;
   }[];
   handleReadAgain: (item: string) => void;

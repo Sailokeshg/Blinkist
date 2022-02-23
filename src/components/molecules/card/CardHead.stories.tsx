@@ -14,5 +14,6 @@ Primary.args ={
     image:"image1",
     bookName:"BookTitle",
     authorName:"AuthorName",
-    time:"time"
+    time:"time",
+    readcount:"2k reads",
 }

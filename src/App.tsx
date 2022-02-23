@@ -42,6 +42,7 @@ let readingBooks = [
     name: "Beyond Entrepreneurship 2.0",
     author: "Erica Keswin",
     time: "13-minute read",
+    readcount:"1.9k reads",
     finished: false,
   },
   {
@@ -49,6 +50,7 @@ let readingBooks = [
     name: "Bring Your Human to Work",
     author: "Erica Keswin",
     time: "13-minute read",
+    readcount:"1.9k reads",
     finished: false,
   },
   {
@@ -56,6 +58,7 @@ let readingBooks = [
     name: "Employee to Entrepreneur",
     author: "Steve Glaveski",
     time: "15-minute read",
+    readcount:"1.9k reads",
     finished: false,
   },
   {
@@ -63,6 +66,7 @@ let readingBooks = [
     name: "Doesn't Hurt to Ask",
     author: "Trey Gowdy",
     time: "13-minute read",
+    readcount:"1.9k reads",
     finished: false,
   },
   {
@@ -70,6 +74,7 @@ let readingBooks = [
     name: "The Fate of Food",
     author: "Amanda Little",
     time: "12-minute read",
+    readcount:"1.9k reads",
     finished: false,
   },
   {
@@ -77,6 +82,7 @@ let readingBooks = [
     name: "Lives of the Stoics",
     author: "Ryan Holiday, Stephen Hansel",
     time: "13-minute read",
+    readcount:"1.9k reads",
     finished: false,
   },
 ];
@@ -88,6 +94,7 @@ let finishedBooks = [
     name: "Loving Your Business",
     author: "Debbie King",
     time: "13-minute read",
+    readcount:"1.9k reads",
     finished: true,
   },
   {
@@ -95,6 +102,7 @@ let finishedBooks = [
     name: "The Lonely Century",
     author: "Noreena Hertz",
     time: "15-minute read",
+    readcount:"1.9k reads",
     finished: true,
   },
   {
@@ -102,6 +110,7 @@ let finishedBooks = [
     name: "Eat Better, Feel Better",
     author: "Giada De Laurentiis",
     time: "13-minute read",
+    readcount:"1.9k reads",
     finished: true,
   },
   {
@@ -109,6 +118,7 @@ let finishedBooks = [
     name: "Dropshipping",
     author: "James Moore",
     time: "12-minute read",
+    readcount:"1.9k reads",
     finished: true,
   },
 ];
@@ -128,7 +138,7 @@ function App() {
     if(books.includes(item)){
       let temp = finishedBooks.find(x => x.name === item);
       if(temp === undefined){
-        temp = {image:"" , name: "" ,author: "", time: "", finished: false};
+        temp = {image:"" , name: "" ,author: "", time: "", readcount:"", finished: false};
       }
       temp.finished = false;
       const a = finishedBooks.filter(x => x.name !== item);
@@ -142,7 +152,7 @@ function App() {
     if(books.includes(item)){
       let temp = readingBooks.find(x => x.name === item);
       if(temp === undefined){
-        temp = {image:"" , name: "" ,author: "", time: "", finished: false};
+        temp = {image:"" , name: "" ,author: "", time: "", readcount:"",finished: false};
       }
       temp.finished = true;
       const a = readingBooks.filter(x => x.name !== item);

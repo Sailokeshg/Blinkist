@@ -12,6 +12,7 @@ interface CardProps {
     name: string;
     author: string;
     time: string;
+    readcount: string;
     finished: boolean;
   }[];
   handleReadAgain: (item: string) => void;
@@ -38,6 +39,7 @@ const cardUi = (props: CardProps) => {
               bookName={e.name}
               authorName={e.author}
               time={e.time}
+              readcount={e.readcount}
             />
           </Grid>
           <Grid item>

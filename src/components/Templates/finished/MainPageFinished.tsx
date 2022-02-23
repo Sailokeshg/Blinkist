@@ -7,6 +7,7 @@ interface Books {
     name: string;
     author: string;
     time: string;
+    readcount: string;
     finished: boolean;
   }[];
   handleFinish: (item: string) => void;

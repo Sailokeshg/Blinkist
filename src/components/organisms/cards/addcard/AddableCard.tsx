@@ -1,4 +1,3 @@
-import { ClassNames } from "@emotion/react";
 import { Card,Grid } from "@mui/material";
 import AddToLibraryButton from "../../../atoms/addtolibrarybutton/AddToLibraryButton";
 import CardHead from "../../../molecules/card/CardHead";
@@ -26,6 +25,7 @@ interface CardProps {
         name: string,
         author: string,
         time: string,
+        readcount: string,
     }[];
 }
 const AddableCard = (props:CardProps) => {
@@ -35,7 +35,7 @@ const AddableCard = (props:CardProps) => {
             <Card className={classes.cardStyle}>
                 <Grid container direction="column">
                     <Grid item>
-                        <CardHead image={e.image} bookName={e.name} authorName={e.author}
+                        <CardHead readcount={e.readcount} image={e.image} bookName={e.name} authorName={e.author}
                         time={e.time}
                         />
                         </Grid>
