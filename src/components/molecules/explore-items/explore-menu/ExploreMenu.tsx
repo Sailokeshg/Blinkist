@@ -93,9 +93,9 @@ const ExploreMenu = (props: Handler) => {
         <Box className={classes.exploreBoxOne}>
           <Box width="1100px">
             <ExploreMenuHead />
-            <Divider
+            <Divider 
               className={classes.exploreDivider}
-              style={{ border: "1psx solid #042330" }}
+              style={{ border: "1px solid #042330" }}
             />
             <Grid container rowSpacing="18px" className={classes.exploreGrid}>
               {components.map((e) => (

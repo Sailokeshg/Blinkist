@@ -7,9 +7,14 @@ import { theme } from "../../../../themes/Theme";
 const useStyle = makeStyles({
   exploreHeadItemOne: {
     color: "#116BE9",
+    paddingTop: "22px",
+    paddingBottom: "20px",
   },
   exploreHeadItemTwo: {
     color: " #6D787E",
+    paddingTop: "22px",
+    paddingBottom: "20px",
+    
   },
 });
 const ExploreMenuHead = () => {
@@ -18,7 +23,7 @@ const ExploreMenuHead = () => {
 <ThemeProvider theme={theme}>
     <Grid container direction="row">
       <Grid item xs={4}>
-        <Typography variant="subtitle3" className={classes.exploreHeadItemOne}>
+        <Typography variant="body1" className={classes.exploreHeadItemOne}>
           Explore by category
         </Typography>
       </Grid>
