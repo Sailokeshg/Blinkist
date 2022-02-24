@@ -39,13 +39,13 @@ const useStyle = makeStyles({
   tabStyle: {
     textTransform: "none",
     textAlign: "left",
-    paddingRight: "100px",
+    paddingRight: "150px",
     position: "relative",
   },
   tabs: {
     marginLeft: "460px",
     marginTop: "60px",
-    position: "inherit",
+    position: "relative",
   },
 });
 
@@ -68,7 +68,7 @@ const ReadingTabs = (props: Books) => {
           TabIndicatorProps={{ style: { backgroundColor: "#22C870" } }}
           onChange={handleTabs}
         >
-          <Tab
+          <Tab 
             label={
               <Typography variant="subtitle2">Currently reading</Typography>
             }

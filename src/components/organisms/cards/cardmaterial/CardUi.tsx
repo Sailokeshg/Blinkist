@@ -19,21 +19,26 @@ interface CardProps {
   handleFinish: (item: string) => void;
 }
 
-// const useStyle = makeStyles({
-//   cardborder: {
-//     borderRadius: "8px",
-//   },
-// });
+const useStyle = makeStyles({
+  cardsgrid: {
+    marginLeft: "400px",
+    width:"1000px",
+    
+  },
+  cardstyle: {
+    borderRadius: "8px",
+  }
+});
 
-const cardUi = (props: CardProps) => {
+const CardUi = (props: CardProps) => {
 
-//   const classes = useStyle();
+  const classes = useStyle();
 
   const bookCards = props.bookdetails.map((e) => (
     <Grid item key={e.name}>
-      <Card >
+      <Card className={classes.cardstyle}>
         <Grid container direction="column">
-          <Grid item>
+          <Grid item >
             <CardHead
               image={e.image}
               bookName={e.name}
@@ -71,13 +76,13 @@ const cardUi = (props: CardProps) => {
     <Grid
       container
       key="name"
-      rowSpacing="32px"
+      rowSpacing="30px"
       columnSpacing="32px"
-     
+     className={classes.cardsgrid}
     >
       {bookCards}
     </Grid>
   );
 };
 
-export default cardUi;
+export default CardUi;

@@ -11,11 +11,11 @@ interface FinishedButtonProp {
 
 const useStyle = makeStyles({
   finishReading: {
-    fontWeight: 500,
-    fontSize: "16px",
     color: "#0365F2",
     textTransform: "none",
     borderColor: "none",
+    paddingBottom:"10px",
+    paddingTop:"14px",
   },
 });
 

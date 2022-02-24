@@ -25,8 +25,10 @@ const useStyle = makeStyles({
     },
     maingridone: {
         backgroundColor: "#F1F6F4",
-        marginTop : "350px",
-        paddingLeft: "370px",
+        backgroundRepeat: "repeat",
+        backgroundSize: "fill",
+        marginTop : "111px",
+        paddingLeft: "350px",
         justifyContent: "center", 
     },
     navs:{
