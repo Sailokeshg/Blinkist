@@ -11,22 +11,25 @@ interface HeaderLeftProps {
   handleChange: () => void;
 }
 
-const useStyle = makeStyles({
-  headerLeftGridMain: {
-    columnGap: "42px",
-    marginTop: "30px",
-    marginBottom: "30px",
-    justifyContent: "center",
-  },
-  headerLeftGrid: {
-    marginTop: "6px",
-    justifyContent: "center",
-  },
-  headerLeftGridLibrary: {
-    marginTop: "4px",
-  }
-});
+
 const HeaderLeft = (props: HeaderLeftProps) => {
+
+  const useStyle = makeStyles({
+    headerLeftGridMain: {
+      columnGap: "42px",
+      marginTop: "30px",
+      marginBottom: "30px",
+      justifyContent: "center",
+    },
+    headerLeftGrid: {
+      marginTop: "6px",
+      justifyContent: "center",
+    },
+    headerLeftGridLibrary: {
+      marginTop: "4px",
+    }
+  });
+  
   const classes = useStyle();
   return (
     <Grid container className={classes.headerLeftGridMain}>

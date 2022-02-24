@@ -7,20 +7,21 @@ interface SearchInputProps {
   search: (item: string) => void;
 }
 
-const useStyle = makeStyles({
-  TextField: {
-    width: "658px",
-    marginBottom: "0px",
-    marginTop: "58px",
-    color: "#6D787E",
-    padding: "16px",
-    fontWeight: 700,
-    fontSize: "24px",
-    marginLeft: "225px",
-  },
-});
-
 const MainSearch = (props: SearchInputProps) => {
+
+  const useStyle = makeStyles({
+    TextField: {
+      width: "658px",
+      marginBottom: "0px",
+      marginTop: "58px",
+      color: "#6D787E",
+      padding: "16px",
+      fontWeight: 700,
+      fontSize: "24px",
+      marginLeft: "225px",
+    },
+  });
+
   const classes = useStyle();
   return (
     <TextField

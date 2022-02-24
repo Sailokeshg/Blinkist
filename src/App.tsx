@@ -12,6 +12,7 @@ import book7 from "../src/components/atoms/assets/book7.png";
 import book8 from "../src/components/atoms/assets/book8.png";
 import book9 from "../src/components/atoms/assets/book9.png";
 import { Grid } from "@mui/material";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import bookimage from "../src/components/atoms/assets/bookimage.png";
 import ToolBarHeader from "./components/organisms/header/toolbar/ToolBarHeader";
 import { useState } from "react";
@@ -22,6 +23,9 @@ import ReadingTabs from "./components/organisms/tabs/ReadingTabs";
 import ExploreMenu from "./components/molecules/explore-items/explore-menu/ExploreMenu";
 import { ThemeProvider } from "@mui/styles";
 import { theme } from "./themes/Theme";
+import BookDetailsPage from "./components/organisms/bookdetails/BookDetailsPage";
+import KeyIdeas from "./components/atoms/bookdetails/keyideas/KeyIdeas";
+import BookDetailsTabs from "./components/molecules/bookdetailstabs/BookDetailsTabs";
 
 const books = [
   "Beyond Entrepreneurship 2.0",
@@ -174,21 +178,40 @@ function App() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-    <div className="App">
-      <ToolBarHeader icon={icon} handleChange={handleChange} />
-      {visible ? <ExploreMenu handleChange={handleChange} /> : undefined}
-      <MyLibraryHeading />
+    <BrowserRouter>
+      <div className="App">
+        <ToolBarHeader icon={icon} handleChange={handleChange} />
+        {visible ? <ExploreMenu handleChange={handleChange} /> : undefined}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <MyLibraryHeading />
 
-      <ReadingTabs
-        currentReading={readingBooks}
-        finishedReading={finishedBooks}
-        handleReadAgain={handleReadAgain}
-        handleFinish={handleFinish}
-      />
-      <FooterMain />
-    </div>
-    </ThemeProvider>
+                <ReadingTabs
+                  currentReading={readingBooks}
+                  finishedReading={finishedBooks}
+                  handleReadAgain={handleReadAgain}
+                  handleFinish={handleFinish}
+                />
+              </>
+            }
+          ></Route>
+          <Route
+            path="/bookdetails"
+            element={
+              <>
+                
+                <BookDetailsPage button={button} handleFinish={handleFinish}/>
+                <BookDetailsTabs/>
+              </>
+            }>
+          </Route>
+        </Routes>
+        <FooterMain />
+      </div>
+    </BrowserRouter>
   );
 }
 
