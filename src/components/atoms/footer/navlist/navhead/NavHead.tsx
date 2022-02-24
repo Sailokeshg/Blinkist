@@ -8,14 +8,17 @@ interface NavHeadNameProp {
     headname: string
 }
 
-const useStyle= makeStyles({
+
+const NavHead = (props:NavHeadNameProp) =>{
+  
+  const useStyle= makeStyles({
     navHead: {
     fontStyle: "normal",
     fontWeight: 700,
     color: "#03314B",
     }
 });
-const NavHead = (props:NavHeadNameProp) =>{
+
     const classes = useStyle()
   return (
     <ThemeProvider theme={theme}>

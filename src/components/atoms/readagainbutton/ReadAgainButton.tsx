@@ -9,22 +9,25 @@ interface ReadAgainButtonProp {
   name: string;
 }
 
-const useStyle = makeStyles({
-  readAgain: {
-    color: "#0365F2",
-    width: "parent",
-    textTransform: "none",
-    paddingTop: "14px",
-    paddingBottom: "10px",
-    fontSize: "16px",
-    fontWeight: 500,
-    "&:hover": {
-      borderRadius: "0px",
-      textDecoration: "underline",
-    },
-  },
-});
+
 const ReadAgainButton = (props: ReadAgainButtonProp) => {
+
+  const useStyle = makeStyles({
+    readAgain: {
+      color: "#0365F2",
+      width: "parent",
+      textTransform: "none",
+      paddingTop: "14px",
+      paddingBottom: "10px",
+      fontSize: "16px",
+      fontWeight: 500,
+      "&:hover": {
+        borderRadius: "0px",
+        textDecoration: "underline",
+      },
+    },
+  });
+  
   const classes = useStyle();
   return (
     <ThemeProvider theme={theme}>

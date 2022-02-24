@@ -4,18 +4,18 @@ import { makeStyles } from "@mui/styles";
 import LoginAvatar from "../../atoms/avatar/LoginAvatar";
 import NavDown from "../../atoms/nav/nav-down/NavDown";
 
-const useStyle = makeStyles({
-  avatarDrop: {
-    marginBottom: "23px",
-    marginTop: "29px",
-    marginLeft: "292px",
-  },
-  avatarNavDown: {
-    marginTop: "6.85px",
-  },
-});
-
 const AvatarDropDown = () => {
+  const useStyle = makeStyles({
+    avatarDrop: {
+      marginBottom: "23px",
+      marginTop: "29px",
+      marginLeft: "292px",
+    },
+    avatarNavDown: {
+      marginTop: "6.85px",
+    },
+  });
+  
   const classes = useStyle();
 
   return (

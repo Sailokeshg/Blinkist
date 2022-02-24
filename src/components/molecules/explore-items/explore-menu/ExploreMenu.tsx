@@ -20,9 +20,10 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import {Grid} from "@mui/material"
-import { makeStyles } from "@mui/styles";
+import { makeStyles, ThemeProvider } from "@mui/styles";
 import ExploreMenuHead from "../explore-header/ExploreMenuHead";
 import { Divider } from "@mui/material";
+import { theme } from "../../../../themes/Theme";
 
 const exploreMenuList = [
   { name: "Entrepreneurship", comp: <RocketLaunchOutlinedIcon /> },
@@ -49,32 +50,40 @@ interface Handler {
   handleChange: () => void;
 }
 
-const useStyle = makeStyles({
-  exploreBox: {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    paddingTop: "20px",
-  },
-  exploreBoxOne: {
-    paddingLeft: "285px",
-    backgroundColor: "#F1F6F4",
-    paddingBottom: "15px",
-  },
-  exploreBoxTwo: {
-    backgroundColor: "#111",
-    height: "100%",
-    width: "100%",
-    opacity: "0.4",
-  },
-  exploreDivider: {
-    marginRight: "170px",
-  },
-  exploreGrid: {
-    paddingTop: "10px",
-  },
-});
+
 const ExploreMenu = (props: Handler) => {
+
+  const useStyle = makeStyles({
+    exploreBox: {
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      paddingTop: "20px",
+    },
+    exploreBoxOne: {
+      paddingLeft: "335px",
+      backgroundColor: "#F1F6F4",
+      paddingBottom: "15px",
+      justifyContent: "center",
+    },
+    exploreBoxTwo: {
+      backgroundColor: "#111",
+      height: "100%",
+      width: "100%",
+      opacity: "0.2",
+    },
+    exploreDivider: {
+      marginRight: "10px",
+      marginLeft: "106px",
+    },
+    exploreGrid: {
+      paddingTop: "10px",
+      marginLeft: "100px",
+      textAlign: "left",
+      justifyContent:"space-evenly",
+    },
+  });
+
   let count = 1;
   const classes = useStyle();
   const components = exploreMenuList.map((e) => ({
@@ -88,6 +97,7 @@ const ExploreMenu = (props: Handler) => {
     ),
   }));
   return (
+    <ThemeProvider theme={theme}>
     <>
       <Box zIndex="1" className={classes.exploreBox}>
         <Box className={classes.exploreBoxOne}>
@@ -97,7 +107,7 @@ const ExploreMenu = (props: Handler) => {
               className={classes.exploreDivider}
               style={{ border: "1px solid #042330" }}
             />
-            <Grid container rowSpacing="18px" className={classes.exploreGrid}>
+            <Grid container rowSpacing="16px" className={classes.exploreGrid}>
               {components.map((e) => (
                 <Grid item xs={4} key={e.id}>
                   {e.comp}
@@ -109,6 +119,7 @@ const ExploreMenu = (props: Handler) => {
         <Box className={classes.exploreBoxTwo}></Box>
       </Box>
     </>
+    </ThemeProvider>
   );
 };
 

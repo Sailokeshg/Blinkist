@@ -4,20 +4,23 @@ import {makeStyles} from "@material-ui/core/styles";
 import ThemeProvider from "@material-ui/styles/ThemeProvider";
 import { theme } from "../../../../themes/Theme";
 
-const useStyle = makeStyles({
-  exploreHeadItemOne: {
-    color: "#116BE9",
-    paddingTop: "22px",
-    paddingBottom: "20px",
-  },
-  exploreHeadItemTwo: {
-    color: " #6D787E",
-    paddingTop: "22px",
-    paddingBottom: "20px",
-    
-  },
-});
+
 const ExploreMenuHead = () => {
+
+  const useStyle = makeStyles({
+    exploreHeadItemOne: {
+      color: "#116BE9",
+      paddingTop: "22px",
+      paddingBottom: "20px",
+    },
+    exploreHeadItemTwo: {
+      color: " #6D787E",
+      paddingTop: "22px",
+      paddingBottom: "20px",
+      
+    },
+  });
+  
   const classes = useStyle();
   return (
 <ThemeProvider theme={theme}>

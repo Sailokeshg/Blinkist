@@ -8,15 +8,18 @@ interface BookDetailsProps {
     bookName: string;
 }
 
-const useStyles = makeStyles({
-  bookTitleOne: {
-    fontStyle: "normal",
-    marginLeft: "16px",
-    marginTop: "23px",
-    textAlign: "left",
-  },
-});
+
 const CardHead = (props:BookDetailsProps) => {
+
+  const useStyles = makeStyles({
+    bookTitleOne: {
+      fontStyle: "normal",
+      marginLeft: "16px",
+      marginTop: "23px",
+      textAlign: "left",
+    },
+  });
+  
    const classes = useStyles();
     return (
       <ThemeProvider theme={theme}>

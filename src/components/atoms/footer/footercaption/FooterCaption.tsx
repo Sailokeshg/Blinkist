@@ -4,16 +4,19 @@ import { Typography } from "@mui/material";
 import ThemeProvider from "@mui/styles/ThemeProvider";
 import { theme } from "../../../../themes/Theme";
 
-const useStyles = makeStyles({
-  caption: {
-    fontStyle: "normal",
-    fontSize: "24px",
-    fontWeight: 500,
-    color: "#0365F2",
-  },
-});
+
 
 const FooterCaption = () => {
+  
+  const useStyles = makeStyles({
+    caption: {
+      fontStyle: "normal",
+      fontSize: "24px",
+      fontWeight: 500,
+      color: "#0365F2",
+    },
+  });
+
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>

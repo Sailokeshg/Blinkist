@@ -7,19 +7,22 @@ interface ButtonTypes {
   itemname: string;
   handleChange: () => void;
 }
-const useStyle = makeStyles({
-  buttons: {
-    textTransform: "none",
-    color: "#6D787E",
-    fontWeight: 400,
-    fontStyle: "Normal",
-    fontSize: "16px",
-    "&:hover": {
-      color: "#0365F2",
-    },
-  },
-});
+
 const Buttons = (props: ButtonTypes) => {
+  
+  const useStyle = makeStyles({
+    buttons: {
+      textTransform: "none",
+      color: "#6D787E",
+      fontWeight: 400,
+      fontStyle: "Normal",
+      fontSize: "16px",
+      "&:hover": {
+        color: "#0365F2",
+      },
+    },
+  });
+
   const classes = useStyle();
   return (
     <Button

@@ -4,16 +4,18 @@ import { makeStyles } from "@mui/styles";
 import { ThemeProvider } from "@mui/styles";
 import {theme} from "../../../../themes/Theme";
 
-const useStyle = makeStyles({
-    policies: {
-        fontStyle: "normal",
-        color: "#6D787E",
-        display: "inline",    
-        float: "left",
-    }
-});
 
 const Policies = () => {
+
+    const useStyle = makeStyles({
+        policies: {
+            fontStyle: "normal",
+            color: "#6D787E",
+            display: "inline",    
+            float: "left",
+        }
+    });
+
     const classes = useStyle();
     return(
         <ThemeProvider theme={theme}>

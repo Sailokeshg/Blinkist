@@ -28,6 +28,9 @@ interface Books {
   handleFinish: (item: string) => void;
 }
 
+
+const ReadingTabs = (props: Books) => {
+
 const useStyle = makeStyles({
   activeTab: {
     textTransform: "none",
@@ -49,7 +52,6 @@ const useStyle = makeStyles({
   },
 });
 
-const ReadingTabs = (props: Books) => {
   const classes = useStyle();
   const [value, setValue] = useState("0");
   const [bool, setBool] = useState(false);

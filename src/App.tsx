@@ -15,13 +15,13 @@ import { Grid } from "@mui/material";
 import bookimage from "../src/components/atoms/assets/bookimage.png";
 import ToolBarHeader from "./components/organisms/header/toolbar/ToolBarHeader";
 import { useState } from "react";
-import { ThemeProvider } from "@material-ui/core";
-import { theme } from "./themes/Theme";
 import MyLibraryHeading from "./components/atoms/mylibrary/mylibrary-heading/MyLibraryHeading";
 import FooterMain from "./components/molecules/footer/mainfooter/FooterMain";
 import MainSearch from "./components/organisms/search/MainSearch";
 import ReadingTabs from "./components/organisms/tabs/ReadingTabs";
 import ExploreMenu from "./components/molecules/explore-items/explore-menu/ExploreMenu";
+import { ThemeProvider } from "@mui/styles";
+import { theme } from "./themes/Theme";
 
 const books = [
   "Beyond Entrepreneurship 2.0",
@@ -174,6 +174,7 @@ function App() {
   };
 
   return (
+    <ThemeProvider theme={theme}>
     <div className="App">
       <ToolBarHeader icon={icon} handleChange={handleChange} />
       {visible ? <ExploreMenu handleChange={handleChange} /> : undefined}
@@ -187,6 +188,7 @@ function App() {
       />
       <FooterMain />
     </div>
+    </ThemeProvider>
   );
 }
 

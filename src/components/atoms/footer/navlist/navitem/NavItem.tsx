@@ -4,20 +4,22 @@ import { Typography } from "@mui/material";
 import { theme } from "../../../../../themes/Theme";
 import ThemeProvider from "@material-ui/styles/ThemeProvider";
 
-const useStyle = makeStyles({
-    navItem: {
-        width: "214px",
-        marginTop: "16px",
-        fontStyle: "normal",
-        color: "#6D787E",
-    }
-});
 
 interface NavItemProp {
     itemname: string
 }
 
 const NavItem = (props:NavItemProp) => {
+
+    const useStyle = makeStyles({
+        navItem: {
+            width: "214px",
+            marginTop: "16px",
+            fontStyle: "normal",
+            color: "#6D787E",
+        }
+    });
+    
     const classes = useStyle();
     return (
         <ThemeProvider theme={theme}>

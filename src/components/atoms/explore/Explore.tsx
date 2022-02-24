@@ -9,25 +9,28 @@ interface HeaderProps {
   handleChange: () => void;
 }
 
-const useStyle = makeStyles({
-  exploreButton: {
-    marginTop: "-8px",
-    fontSize: "16px",
-    padding: "none",
-    textTransform: "none",
-    fontWeight: 500,
-    color: "#03314B",
-    "&:hover": {
-      borderBottom: "3px solid #2CE080",
-      borderRadius: "0px",
-      background: "none",
-    },
-  },
-});
+
 const Explore = (props: HeaderProps) => {
+  const useStyle = makeStyles({
+    exploreButton: {
+      marginTop: "-8px",
+      fontSize: "16px",
+      padding: "none",
+      textTransform: "none",
+      fontWeight: 500,
+      color: "#03314B",
+      "&:hover": {
+        borderBottom: "3px solid #2CE080",
+        borderRadius: "0px",
+        background: "none",
+      },
+    },
+  });
+
   const classes = useStyle();
   return (
     <Button
+      onClick={() => props.handleChange()}
       endIcon={props.icon ? <NavUp /> : <NavDown />}
       className={classes.exploreButton}
     ><Typography variant="body1"> 

@@ -9,17 +9,18 @@ interface FinishedButtonProp {
   name: string;
 }
 
-const useStyle = makeStyles({
-  finishReading: {
-    color: "#0365F2",
-    textTransform: "none",
-    borderColor: "none",
-    paddingBottom:"10px",
-    paddingTop:"14px",
-  },
-});
 
 const FinishedButton = (props: FinishedButtonProp) => {
+  const useStyle = makeStyles({
+    finishReading: {
+      color: "#0365F2",
+      textTransform: "none",
+      borderColor: "none",
+      paddingBottom:"10px",
+      paddingTop:"14px",
+    },
+  });
+
   const classes = useStyle();
   return (
     <ThemeProvider theme={theme}>
