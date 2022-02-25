@@ -5,7 +5,8 @@ import FinishedBar from "../../../atoms/finished-bar/FinishedBar";
 import ReadAgainButton from "../../../atoms/readagainbutton/ReadAgainButton";
 import CardHead from "../../../molecules/card/CardHead";
 import FinishedButton from "../../../atoms/finishedbutton/FinishedButton";
-import { makeStyles } from "@mui/styles";
+import { makeStyles, ThemeProvider } from "@mui/styles";
+import {theme} from "../../../../themes/Theme";
 interface CardProps {
   bookdetails: {
     image: string;
@@ -19,18 +20,20 @@ interface CardProps {
   handleFinish: (item: string) => void;
 }
 
-const useStyle = makeStyles({
-  cardsgrid: {
-    marginLeft: "400px",
-    width:"1000px",
-    
-  },
-  cardstyle: {
-    borderRadius: "8px",
-  }
-});
 
 const CardUi = (props: CardProps) => {
+
+
+  const useStyle = makeStyles({
+    cardsgrid: {
+      marginLeft: "410px",
+      width:"1000px",
+      
+    },
+    cardstyle: {
+      borderRadius: "8px",
+    }
+  });
 
   const classes = useStyle();
 
@@ -73,6 +76,7 @@ const CardUi = (props: CardProps) => {
   ));
 
   return (
+    <ThemeProvider theme={theme}>
     <Grid
       container
       key="name"
@@ -82,6 +86,7 @@ const CardUi = (props: CardProps) => {
     >
       {bookCards}
     </Grid>
+    </ThemeProvider>
   );
 };
 

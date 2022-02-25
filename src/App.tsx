@@ -11,7 +11,6 @@ import book6 from "../src/components/atoms/assets/book6.png";
 import book7 from "../src/components/atoms/assets/book7.png";
 import book8 from "../src/components/atoms/assets/book8.png";
 import book9 from "../src/components/atoms/assets/book9.png";
-import { Grid } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import bookimage from "../src/components/atoms/assets/bookimage.png";
 import ToolBarHeader from "./components/organisms/header/toolbar/ToolBarHeader";
@@ -23,9 +22,12 @@ import ReadingTabs from "./components/organisms/tabs/ReadingTabs";
 import ExploreMenu from "./components/molecules/explore-items/explore-menu/ExploreMenu";
 import { ThemeProvider } from "@mui/styles";
 import { theme } from "./themes/Theme";
+import MainBanner from "./components/molecules/banner/mainbanner/MainBanner";
 import BookDetailsPage from "./components/organisms/bookdetails/BookDetailsPage";
 import KeyIdeas from "./components/atoms/bookdetails/keyideas/KeyIdeas";
 import BookDetailsTabs from "./components/molecules/bookdetailstabs/BookDetailsTabs";
+import EnterprenurReading from "./components/Templates/enterpreneurbook/EnterpreneurReading";
+import Heading from "./components/atoms/heading/Heading";
 
 const books = [
   "Beyond Entrepreneurship 2.0",
@@ -129,6 +131,7 @@ let finishedBooks = [
 function App() {
   const [visible, setvisible] = useState(false);
   const [icon, seticon] = useState(false);
+  const [search, setSearch] = useState("");
   const handleChange = () => {
     setvisible(!visible);
     seticon(!icon);
@@ -178,6 +181,7 @@ function App() {
   };
 
   return (
+    <ThemeProvider theme={theme}>
     <BrowserRouter>
       <div className="App">
         <ToolBarHeader icon={icon} handleChange={handleChange} />
@@ -188,7 +192,6 @@ function App() {
             element={
               <>
                 <MyLibraryHeading />
-
                 <ReadingTabs
                   currentReading={readingBooks}
                   finishedReading={finishedBooks}
@@ -202,16 +205,26 @@ function App() {
             path="/bookdetails"
             element={
               <>
-                
                 <BookDetailsPage button={button} handleFinish={handleFinish}/>
                 <BookDetailsTabs/>
               </>
             }>
           </Route>
+          <Route path="/explore"
+          element={
+            <>
+            <MainBanner/>
+            <MainSearch search={setSearch} />
+            <Heading/>
+            <EnterprenurReading value={search}/>
+            </>
+          }>
+          </Route>
         </Routes>
         <FooterMain />
       </div>
     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

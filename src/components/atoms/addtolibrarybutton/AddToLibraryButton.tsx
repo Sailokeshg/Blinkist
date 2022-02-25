@@ -1,7 +1,9 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 import AddIcon from "@mui/icons-material/Add";
+import { Link } from 'react-router-dom';
 import { makeStyles } from "@material-ui/core/styles";
+
 
 const customStyle = makeStyles({
   addToLibBtn: {
@@ -12,6 +14,7 @@ const customStyle = makeStyles({
     paddingBottom: "20px",
     fontSize: "16px",
     fontWeight: 500,
+    backgroundColor:"#FFFF",
     "&:hover": {
       backgroundColor: "#F5F5F5",
     },
@@ -21,9 +24,11 @@ const customStyle = makeStyles({
  function AddToLibraryButton() {
   const classes = customStyle();
   return (
+    <Link to="/bookdetails" >
     <Button startIcon={<AddIcon />} className={classes.addToLibBtn}>
       Add to library
     </Button>
+    </Link>
   );
 }
 

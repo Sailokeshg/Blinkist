@@ -46,7 +46,7 @@ const useStyle = makeStyles({
     position: "relative",
   },
   tabs: {
-    marginLeft: "460px",
+    marginLeft: "470px",
     marginTop: "60px",
     position: "relative",
   },

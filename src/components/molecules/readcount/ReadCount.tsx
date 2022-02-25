@@ -9,6 +9,7 @@ interface Props {
 const useStyle = makeStyles({
   readCountGrid: {
     color: "#6D787E",
+    
   },
 });
 const ReadCount = (props: Props) => {

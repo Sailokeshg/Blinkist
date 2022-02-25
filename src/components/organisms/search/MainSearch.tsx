@@ -1,7 +1,12 @@
 import { InputAdornment, TextField } from "@mui/material";
 import React from "react";
 import { makeStyles } from "@mui/styles";
+import { ThemeProvider } from "@mui/material";
 import SearchIcon from "../../atoms/search-icon/SearchIcon";
+import {theme} from "../../../themes/Theme";
+
+
+
 
 interface SearchInputProps {
   search: (item: string) => void;
@@ -12,18 +17,19 @@ const MainSearch = (props: SearchInputProps) => {
   const useStyle = makeStyles({
     TextField: {
       width: "658px",
-      marginBottom: "0px",
+      marginBottom: "2px",
       marginTop: "58px",
       color: "#6D787E",
       padding: "16px",
       fontWeight: 700,
       fontSize: "24px",
-      marginLeft: "225px",
+      marginRight: "250px",
     },
   });
 
   const classes = useStyle();
   return (
+    <ThemeProvider theme={theme}>
     <TextField
       variant="standard"
       placeholder="Search by title or author"
@@ -39,6 +45,7 @@ const MainSearch = (props: SearchInputProps) => {
       }}
       className={classes.TextField}
     ></TextField>
+    </ThemeProvider>
   );
 };
 

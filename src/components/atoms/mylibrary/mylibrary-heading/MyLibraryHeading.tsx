@@ -10,7 +10,7 @@ const MyLibraryHeading = () =>{
   const useStyle = makeStyles({
     myLibraryHeading: {
       marginTop: "59px",
-      marginRight: "790px",
+      marginRight: "793px",
       fontSize: "36px",
       fontWeight: 700,
       color: "#03314B",

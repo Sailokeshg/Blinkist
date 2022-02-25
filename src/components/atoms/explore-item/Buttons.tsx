@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
+import {Link} from "react-router-dom";
 
 interface ButtonTypes {
   itemicon: React.ReactElement;
@@ -25,6 +26,7 @@ const Buttons = (props: ButtonTypes) => {
 
   const classes = useStyle();
   return (
+    <Link to="/explore" style={{ textDecoration: "none" }}>
     <Button
       variant="text"
       startIcon={props.itemicon}
@@ -33,6 +35,7 @@ const Buttons = (props: ButtonTypes) => {
     >
       {props.itemname}
     </Button>
+    </Link>
   );
 };
 

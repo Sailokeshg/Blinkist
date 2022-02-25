@@ -6,6 +6,8 @@ import book4 from "../../atoms/assets/book4.png";
 import book5 from "../../atoms/assets/book5.png";
 import bookimage from "../../atoms/assets/bookimage.png";
 import AddableCard from "../../organisms/cards/addcard/AddableCard";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "../../../themes/Theme";
 
 const readingbooks= [
     {image:bookimage, name:"Beyond Entrepreneurship 2.0", author:"Erica Keswin", time :"13-minute read",readcount:"19k reads"},
@@ -25,7 +27,9 @@ const readingbooks= [
     const tempBooks=readingbooks.filter(e=>e.name.toLowerCase().indexOf(props.value)>-1)
 
     return (
+      <ThemeProvider theme={theme}>
         <AddableCard bookdetails={tempBooks}/>  
+        </ThemeProvider>
     )
   }
 

@@ -27,6 +27,8 @@ const BookDetailsPage = (props:Props) => {
     },
     bookimage: {
         marginTop: "100px",
+        
+        
     }
   });
   const classes = useStyles();
@@ -75,14 +77,14 @@ const BookDetailsPage = (props:Props) => {
           </Grid>
         </Grid>
         <Grid item>
-          <Card>
+          <Card className={classes.bookimage}>
             <CardMedia
               component="img"
               height="292px"
               width="294.1px"
               image={bookimage}
               alt="Book"
-              className={classes.bookimage}
+              
             />
           </Card>
         </Grid>
