@@ -1,11 +1,8 @@
-import { InputAdornment, TextField } from "@mui/material";
+import { InputAdornment, TextField ,ThemeProvider} from "@mui/material";
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import { ThemeProvider } from "@mui/material";
 import SearchIcon from "../../atoms/search-icon/SearchIcon";
 import {theme} from "../../../themes/Theme";
-
-
 
 
 interface SearchInputProps {

@@ -1,4 +1,3 @@
-import React from "react";
 
 import "./App.css";
 
@@ -24,7 +23,6 @@ import { ThemeProvider } from "@mui/styles";
 import { theme } from "./themes/Theme";
 import MainBanner from "./components/molecules/banner/mainbanner/MainBanner";
 import BookDetailsPage from "./components/organisms/bookdetails/BookDetailsPage";
-import KeyIdeas from "./components/atoms/bookdetails/keyideas/KeyIdeas";
 import BookDetailsTabs from "./components/molecules/bookdetailstabs/BookDetailsTabs";
 import EnterprenurReading from "./components/Templates/enterpreneurbook/EnterpreneurReading";
 import Heading from "./components/atoms/heading/Heading";

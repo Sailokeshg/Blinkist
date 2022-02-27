@@ -10,8 +10,4 @@ const Template:ComponentStory<typeof FinishedButton> = (args)=><FinishedButton  
 
 export const Primary = Template.bind({});
 
-Primary.args = {
-    handleFinish:()=>{},
-    name:"FinishedBookName",
-}
 

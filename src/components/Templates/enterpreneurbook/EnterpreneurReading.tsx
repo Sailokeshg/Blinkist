@@ -18,11 +18,11 @@ const readingbooks= [
     {image:book5, name:"Lives of the Stoics", author:"Ryan Holiday, Stephen Hansel", time :"13-minute read",readcount:"19k reads"}
   ];
 
-  interface props{
+  interface Props{
       value:string
   }
 
-  const EnterprenurReading = (props:props) => {
+  const EnterprenurReading = (props:Props) => {
 
     const tempBooks=readingbooks.filter(e=>e.name.toLowerCase().indexOf(props.value)>-1)
 

@@ -1,7 +1,6 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import {makeStyles} from "@mui/styles";
-import {ThemeProvider} from "@mui/styles";
+import {ThemeProvider,makeStyles} from "@mui/styles";
 import {theme} from "../../../themes/Theme";
 
 interface BookDetailsProps {

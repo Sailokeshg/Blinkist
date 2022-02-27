@@ -19,10 +19,10 @@ import CommentOutlinedIcon from "@mui/icons-material/CommentOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
-import {Grid, Typography} from "@mui/material"
+import {Grid,Divider} from "@mui/material"
 import { makeStyles, ThemeProvider } from "@mui/styles";
 import ExploreMenuHead from "../explore-header/ExploreMenuHead";
-import { Divider } from "@mui/material";
+
 import { theme } from "../../../../themes/Theme";
 
 const exploreMenuList = [

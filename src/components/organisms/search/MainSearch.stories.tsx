@@ -10,7 +10,3 @@ export default {
 const Template: ComponentStory<typeof MainSearch> = (args) => <MainSearch {...args}/>;
 
 export const Primary = Template.bind({});
-
-Primary.args = {
-    search:()=>{},
-}

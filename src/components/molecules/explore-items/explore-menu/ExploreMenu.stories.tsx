@@ -10,7 +10,3 @@ const Template: ComponentStory<typeof ExploreMenu> = (args) => < ExploreMenu {..
 
 export const Primary = Template.bind({});
 
-Primary.args = {
-    handleChange:()=>{},
-
-}
