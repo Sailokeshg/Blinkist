@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/home/lokers/React-project/blinkist/src/components/atoms/author/AuthorName.test.tsx">
+    <testCase name="should render authornme" duration="50"/>
+  </file>
+  <file path="/home/lokers/React-project/blinkist/src/components/atoms/booktitle/BookTitle.test.tsx">
+    <testCase name="should render booktitle" duration="38"/>
+  </file>
+</testExecutions>
