@@ -8,7 +8,7 @@ interface BookDetailsProps {
 }
 
 
-const CardHead = (props:BookDetailsProps) => {
+const BookTitle = (props:BookDetailsProps) => {
 
   const useStyles = makeStyles({
     bookTitleOne: {
@@ -30,4 +30,4 @@ const CardHead = (props:BookDetailsProps) => {
     )
 };
 
-export default CardHead;
+export default BookTitle;

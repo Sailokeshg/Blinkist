@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@mui/styles";
 import { Button } from "@mui/material";
 
-const ReadAgain = () => {
+const ReadNow = () => {
   const useStyle = makeStyles({
     readnow: {
       fontSize: "16px",
@@ -20,4 +20,4 @@ const ReadAgain = () => {
   );
 };
 
-export default ReadAgain;
+export default ReadNow;
