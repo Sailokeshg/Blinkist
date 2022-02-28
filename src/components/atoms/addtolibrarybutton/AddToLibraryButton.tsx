@@ -25,7 +25,7 @@ const customStyle = makeStyles({
   const classes = customStyle();
   return (
     <Link to="/bookdetails" >
-    <Button startIcon={<AddIcon />} className={classes.addToLibBtn}>
+    <Button data-testid="AddToLibBtn" startIcon={<AddIcon />} className={classes.addToLibBtn}>
       Add to library
     </Button>
     </Link>

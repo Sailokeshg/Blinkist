@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/lokers/React-project/blinkist/src/components/atoms/author/AuthorName.test.tsx">
-    <testCase name="should render authornme" duration="50"/>
+    <testCase name="should render authornme" duration="73"/>
   </file>
   <file path="/home/lokers/React-project/blinkist/src/components/atoms/booktitle/BookTitle.test.tsx">
-    <testCase name="should render booktitle" duration="38"/>
+    <testCase name="should render booktitle" duration="63"/>
+  </file>
+  <file path="/home/lokers/React-project/blinkist/src/components/atoms/banner/itemtwo/BannerItemTwo.test.tsx">
+    <testCase name="shoudl render explore book heading" duration="59"/>
+  </file>
+  <file path="/home/lokers/React-project/blinkist/src/components/atoms/bookdetails/keyideas/KeyIdeas.test.tsx">
+    <testCase name="should render keyideas in book details page" duration="43"/>
+  </file>
+  <file path="/home/lokers/React-project/blinkist/src/components/atoms/bookdetails/bookmenu/readnow/ReadNow.test.tsx">
+    <testCase name="should render read now button" duration="127"/>
+  </file>
+  <file path="/home/lokers/React-project/blinkist/src/components/atoms/addtolibrarybutton/AddToLibraryButton.test.tsx">
+    <testCase name="Testing AddToLibraryButton" duration="134"/>
+  </file>
+  <file path="/home/lokers/React-project/blinkist/src/components/atoms/bookdetails/bookmenu/kindle/SendToKindle.test.tsx">
+    <testCase name="Should render send to kindle button" duration="146"/>
+  </file>
+  <file path="/home/lokers/React-project/blinkist/src/components/atoms/banner/image/BannerImage.test.tsx">
+    <testCase name="should render banner image" duration="40"/>
+  </file>
+  <file path="/home/lokers/React-project/blinkist/src/components/atoms/banner/itemone/BannerItemOne.test.tsx">
+    <testCase name="shoudl render explore book heading" duration="10"/>
+  </file>
+  <file path="/home/lokers/React-project/blinkist/src/components/atoms/bookdetails/note/BookNote.test.tsx">
+    <testCase name="should render book note" duration="12"/>
+  </file>
+  <file path="/home/lokers/React-project/blinkist/src/components/atoms/bookdetails/title/BookDetailsTitle.test.tsx">
+    <testCase name="should render title in book details page" duration="13"/>
   </file>
 </testExecutions>

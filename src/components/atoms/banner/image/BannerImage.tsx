@@ -5,7 +5,7 @@ import bannerimage from "../../../atoms/assets/bannerimage.png";
 export const BannerImage = () => {
   return (
     <>
-    <img src={bannerimage} alt="main"></img>
+    <img src={bannerimage} alt="main logo"></img>
     </>
   );
 };
