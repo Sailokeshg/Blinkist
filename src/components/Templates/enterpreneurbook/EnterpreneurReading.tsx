@@ -22,7 +22,7 @@ const readingbooks= [
       value:string
   }
 
-  const EnterprenurReading = (props:Props) => {
+  const EnterpreneurReading = (props:Props) => {
 
     const tempBooks=readingbooks.filter(e=>e.name.toLowerCase().indexOf(props.value)>-1)
 
@@ -33,4 +33,4 @@ const readingbooks= [
     )
   }
 
-  export default EnterprenurReading;
+  export default EnterpreneurReading;
