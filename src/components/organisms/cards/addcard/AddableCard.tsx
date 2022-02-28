@@ -19,7 +19,7 @@ const AddableCard = (props:CardProps) => {
     const useStyle = makeStyles({
         cardStyle:{
             maxWidth: "297px",
-            maxHeight: "490px",
+            maxHeight: "470px",
             borderRadius: "8px",
         },
         addableCardGridTwo:{

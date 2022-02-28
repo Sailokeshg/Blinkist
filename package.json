@@ -32,7 +32,8 @@
     "eject": "react-scripts eject",
     "build-static-webapp": "expo build:web",
     "build-storybook": "build-storybook -s public",
-    "storybook": "start-storybook -p 6006 -s public"
+    "storybook": "start-storybook -p 6006 -s public",
+    "coverage": "CI=true npm test -- --coverage --testResultsProcessor=jest-sonar-reporter"
   },
   "eslintConfig": {
     "extends": [

@@ -2,6 +2,8 @@ import React from "react";
 import bookimage from "../../atoms/assets/bookimage.png";
 import { Box, Card, CardMedia, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import ThemeProvider from "@mui/styles/ThemeProvider";
+import {theme} from "../../../themes/Theme";
 import ReadTime from "../../molecules/read-time/ReadTime";
 import AuthorName from "../../atoms/author/AuthorName";
 import BookNote from "../../atoms/bookdetails/note/BookNote";
@@ -34,6 +36,7 @@ const BookDetailsPage = (props:Props) => {
   const classes = useStyles();
 
   return (
+    <ThemeProvider theme={theme}>
     <Box className={classes.bookDetailsBox}>
       <Grid container columnSpacing="125px" justifyContent="center">
         <Grid item>
@@ -90,6 +93,7 @@ const BookDetailsPage = (props:Props) => {
         </Grid>
       </Grid>
     </Box>
+    </ThemeProvider>
   );
 };
 
